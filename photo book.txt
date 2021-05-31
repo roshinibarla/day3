@@ -1,0 +1,41 @@
+using System;
+
+class PhotoBook
+{
+  protected int numPages;
+  public void getNumPages ()
+  {
+    Console.WriteLine ("number of pages are:" + numPages);
+    
+  }
+  public PhotoBook () //default contructor  
+  {
+    numPages = 16;
+  }
+  public PhotoBook (int numPages)
+  {
+    this.numPages = numPages;
+  }
+}
+class BigPhotoBook:PhotoBook
+{
+public BigPhotoBook()
+{
+  numPages = 64;
+  Console.WriteLine ("Large photo book has number of pages:" + numPages);
+}
+}
+
+public class PhotoBookTest
+{
+  public static void Main (string[]args)
+  {
+    PhotoBook pb = new PhotoBook ();
+      pb.getNumPages ();
+    PhotoBook pb1 = new PhotoBook (24);
+      pb1.getNumPages ();
+    BigPhotoBook pb2= new BigPhotoBook();
+      pb2.getNumPages();
+
+}
+}

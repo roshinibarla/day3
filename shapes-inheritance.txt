@@ -1,0 +1,53 @@
+using System;
+
+namespace Day_3
+{
+					
+public class Shape
+{
+	public void S()
+	{
+	     Console.WriteLine("Shape");
+	}
+}
+public class Rectangle : Shape
+{
+         public void calArea1()
+		 {
+		     int l=20,b=30;
+			 int area=l*b;
+			 
+		     Console.WriteLine("Area of rectangle :" +(area));
+		 }
+}
+
+public class Square : Rectangle
+{
+     public void calArea()
+	 {
+	    int s=20;
+		int aa=s*s;
+		
+		Console.WriteLine("Area of square :" +(aa));
+	 }
+}
+
+public class program
+{
+    public static void Main(string[] args)
+	{
+		Square ss=new Square();
+		
+		
+		ss.calArea();
+		ss.calArea1();
+		ss.S();
+	   Console.WriteLine("*********");
+		
+		
+		
+		Console.ReadLine();
+	
+	
+	}
+}}
